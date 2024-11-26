@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI";
+            margin: 0;
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            /* Push elements to the opposite ends */
+            align-items: center;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 30px;
+            font-weight: 700;
+            padding: 15px 0px 25px 0px;
+            color: #424242;
+            margin-left: 10px;
+        }
+
+        .header button {
+
+            display: inline-block;
+            outline: 0;
+            cursor: pointer;
+            border-radius: 6px;
+            border: 1px solid #222222;
+            color: #222222;
+            background-color: #fff;
+            padding: 8px 15px 8px 15px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+            font-size: 18px;
+            height: 42px;
+
+
+        }
+
+        .header button:hover {
+            background: 0 0;
+            color: #fff;
+            background-color: rgb(62, 53, 231);
+        }
+
+        .hero-container {
+            width: 100%;
+            display: flex;
+            padding: 60px;
+            background: rgb(11, 0, 205);
+            background: linear-gradient(90deg, rgba(11, 0, 205, 1) 0%, rgba(44, 44, 221, 1) 35%, rgba(0, 177, 255, 1) 100%);
+            overflow: hidden;
+            border-radius: 30px;
+        }
+
+        .hero-text {
+            width: 60%;
+        }
+
+        .hero-heading {
+            font-size: 40px;
+            color: white;
+            font-weight: 620;
+        }
+
+        .hero-content {
+            font-size: 20px;
+            color: white;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            outline: 0;
+            cursor: pointer;
+            border-radius: 6px;
+            border: none;
+            color: #222222;
+            background-color: #fff;
+            padding: 8px 15px 8px 15px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+            font-size: 18px;
+            height: 42px;
+            margin-top: 15px;
+        }
+
+        .explore-btn:hover {
+            background: 0 0;
+            color: #fff;
+            background-color: rgb(107, 103, 176);
+        }
+
+        .register-btn {
+            display: inline-block;
+            outline: 0;
+            cursor: pointer;
+            border-radius: 6px;
+            border: 1px solid #ff9527;
+            color: #fff;
+            background-color: #ff9527;
+            padding: 8px 15px 8px 15px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+            font-size: 18px;
+            height: 42px;
+            margin-top: 15px;
+            margin-left: 5px;
+        }
+
+        .register-btn:hover {
+            background: 0 0;
+            color: #ff5b3a;
+            background-color: #fff;
+        }
+
+        .hero-img {
+            width: 40%;
+            /* Match image width */
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            /* Match the container width to the image width */
+            height: auto;
+            overflow: hidden;
+            /* Hide any overflowing images */
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            /* Images should take full width of the container */
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .about-webinar {
+            display: flex;
+            margin-top: 20px;
+            padding-top: 30px;
+        }
+
+        .about-content {
+            width: 60%;
+            margin-right: 10px;
+        }
+
+        .about-heading {
+            font-size: 30px;
+            font-weight: 620;
+        }
+
+        .about-text {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        .about-details {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .pricing {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .details {
+            width: 50%;
+            padding-left: 15px;
+        }
+
+        .amount {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .amount span {
+            text-decoration: line-through;
+            color: #5f5f5f;
+            margin-left: 10px;
+        }
+
+        .webinar-details {
+            display: flex;
+            font-size: 20px;
+            border: 1px solid #0445b5;
+            margin-bottom: 12px;
+            padding: 5px 10px 5px 10px;
+            align-items: center;
+            border-radius: 5px
+        }
+
+        .webinar-details span {
+            font-size: 16px;
+        }
+
+        .web-slots {
+            margin-top: 7px;
+            text-align: center;
+        }
+
+        .register-btn1 {
+            display: inline-block;
+            outline: 0;
+            cursor: pointer;
+            border-radius: 6px;
+            border: 1px solid #ff753a;
+            color: #fff;
+            background-color: #ff753a;
+            padding: 8px 15px 8px 15px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+            font-size: 18px;
+            height: 42px;
+            margin-top: 7px;
+            margin-left: 5px;
+            width: 100%;
+        }
+
+        .register-btn1:hover {
+            background: 0 0;
+            color: #ff5b3a;
+            background-color: #fff;
+        }
+
+        .about-img {
+            width: 50%;
+        }
+
+        .about-img video {
+            width: 100%;
+            border: 3px solid #333;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            margin-left: 15px;
+        }
+
+        .learn-part-head {
+            font-size: 36px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .learn {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow items to wrap into multiple rows */
+            gap: 10px;
+            /* Space between items */
+        }
+
+        /* Flex properties for each child div */
+        .learn-item {
+            flex: 1 1 calc(50% - 10px);
+            background-color: #edf2ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .learn-heading {
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .learn-content {
+            font-size: 17px;
+        }
+
+        .learn-reg-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .mentor {
+            display: flex;
+            margin-top: 70px;
+        }
+
+        .mentor-details {
+            width: 60%;
+            padding-right: 20px;
+        }
+
+        .mentor-img {
+            width: 40%;
+        }
+
+        .mentor-head {
+            font-size: 33px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .mentor-name {
+            font-size: 22px;
+        }
+
+        .mentor-content {
+            font-size: 17px;
+        }
+
+        .mentor-img img {
+            width: 100%;
+            border: 5px solid #222222;
+            border-radius: 10px;
+        }
+
+        .why-webinar {
+            margin-top: 50px;
+            padding: 10px;
+        }
+
+        .why-heading {
+            font-size: 35px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .why-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .why-card {
+            flex: 1 1 calc(50% - 10px);
+            background-color: #edf2ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .why-card-heading {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            body {
+              padding-left: 20px;
+              padding-right: 20px;
+            }
+          
+            .header {
+              flex-direction: column; /* Stack elements vertically */
+              align-items: flex-start; /* Align elements to the left */
+              text-align: left;
+            }
+          
+            .header p {
+              font-size: 24px; /* Adjust font size for mobile */
+              margin-left: 0; /* Remove extra left margin */
+            }
+          
+            .header button {
+              width: 100%; /* Make the button full width */
+              text-align: center;
+              margin-top: 10px;
+              display: none; /* Add spacing between the text and button */
+            }
+
+            .hero-container {
+                padding: 15px;
+            }
+            .hero-text {
+                width: 100%;
+            }
+    
+            .hero-heading {
+                font-size: 30px;
+                color: white;
+                font-weight: 620;
+            }
+            .hero-content {
+                font-size: 16px;
+                color: white;
+            }
+            .hero-img{
+                display: none;
+            }
+            .explore-btn {
+                margin-top: 15px;
+                width: 60%;
+                font-size: 16px;
+                padding: 8px 10px 8px 10px;
+            }
+
+            .register-btn {
+                margin-bottom: 10px;
+                width: 60%;
+                margin-left: 0px;
+                font-size: 16px;
+                padding: 8px 10px 8px 10px;
+            }
+            .about-webinar {
+                display: block;
+                margin-top: 40px;
+            } 
+            .about-heading {
+                font-size: 22px;
+                font-weight: 620;
+            }
+            .about-content {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .about-text {
+                font-size: 16px;
+                margin-top: 5px;
+            }
+
+            .register-btn1 {
+                height: 60px;
+            }
+            .webinar-details span {
+                font-size: 15px;
+            }
+            .about-img {
+                width: 100%;
+            }
+            .about-img video {
+                margin-left: 0px;
+            }
+            .learn-part-head {
+                font-size: 28px;
+                font-weight: 700;
+                margin-top: 50px;
+                margin-bottom: 25px;
+                text-align: center;
+            }
+            .learn {
+                display: block;
+            }
+            .learn-item {
+                flex: 1 1 100%; 
+                margin-bottom: 10px; 
+            }
+            .learn-heading {
+                font-size: 20px;
+            }
+            .learn-content {
+                font-size: 15px;
+            }
+            .mentor-details {
+                width: 100%;
+                padding-right: 0px;
+            }
+    
+            .mentor-img {
+                display: none;
+            }
+            .mentor-head {
+                font-size: 28px;
+            }
+            .mentor {
+                display: block;
+                margin-top: 50px;
+            }
+            .mentor-name {
+                font-size: 19px;
+            }
+            .mentor-content {
+                font-size: 15px;
+            }
+            .why-heading {
+                font-size: 28px;
+                margin-top: 10px;
+                margin-bottom: 25px;
+            }
+            .why-container {
+                display: block;
+            }
+            .why-card {
+                flex: 1 1 100%;
+                margin-bottom: 10px;
+            }
+            .why-card-heading {
+                font-size: 20px;
+            }
+            .why-card-content{
+                font-size: 15px;
+            }
+            .header p {
+                padding: 15px 0px 15px 0px;
+            }
+          }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <p>ZEYONE</p>
+        <button>Register Webinar</button>
+    </div>
+    <div class="hero-container">
+        <div class="hero-text">
+            <div class="hero-heading">Become Top 1% in the AI-First World</div>
+            <div class="hero-content">Whether it is Product, Growth, Design, Business, Tech or Data, GrowthSchool is the
+                place to learn from top experts in the field to become the Top 1%</div>
+            <div>
+                <a href="#about-webinar"><button class="explore-btn">Explore Webinar</button></a>
+                <button class="register-btn">Register Webinar</button>
+            </div>
+
+        </div>
+
+        <div class="hero-img">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="assests\header_img\header_img1.png" alt="Image 1">
+                    <img src="assests\header_img\header_img2.png" alt="Image 2">
+                    <img src="assests\header_img\header_img3.png" alt="Image 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<section id="about-webinar">
+    <div class="about-webinar" id="about-webinar">
+        <div class="about-content">
+            <div class="about-heading">Learn How to Earn With an Ecommerce Business With Just a Laptop & WiFi - All From
+                Your Own Home!</div>
+            <div class="about-text">This 3-hour workshop is specifically designed for anyone eager to launch their own
+                ecommerce or dropshipping business, without the hassle of inventory, employees, or a physical office.
+            </div>
+
+            <div class="about-details">
+                <div class="pricing">
+                    <div class="amount">₹199 <span>₹999</span></div>
+                    <button class="register-btn1">Register Webinar</button>
+                    <div class="web-slots">Limited slots</div>
+                </div>
+                <div class="details">
+                    <div class="webinar-details"><i class="fa-regular fa-calendar"
+                            style="color: #4d8eff; margin-right:10px"></i><span>Date: 17th November 03:00 PM</span>
+                    </div>
+                    <div class="webinar-details"><i class="fa-regular fa-hourglass-half"
+                            style="color: #4d8eff; margin-right:10px"></i><span>Duration: 3 Hours</span></div>
+                    <div class="webinar-details"><i class="fa-solid fa-language"
+                            style="color: #4d8eff; margin-right:10px"></i><span>Language: English</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="about-img">
+            <video controls poster="assests\header_img\video_cover_img.jpg">
+                <source src="assests\videos\cover_video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    </section>
+
+    <div class="learn-part">
+        <div class="learn-part-head">What will you Learn?</div>
+
+        <div class="learn">
+            <div class="learn-item">
+                <div class="learn-heading"><i class="fa-regular fa-file-lines"
+                        style="color: #292929;font-size:28px; margin-bottom:5px;"></i><br>What, Who, Why, and When of
+                    Indian Dropshipping</div>
+                <div class="learn-content">Dropshipping lets you sell products online without holding inventory, making
+                    it a low-risk option for job seekers, stay-at-home moms, and students. With India’s booming
+                    e-commerce market, now is the perfect time to start.</div>
+            </div>
+            <div class="learn-item">
+                <div class="learn-heading"><i class="fa-solid fa-cart-shopping"
+                        style="color: #292929;font-size:28px; margin-bottom:5px;"></i></i><br>Understanding the
+                    Dropshipping Process</div>
+                <div class="learn-content">Curious about starting a dropshipping store? This lesson will guide you
+                    step-by-step, covering product research, choosing what to sell, and setting up a Shopify website. No
+                    tech skills required—I'll share tips from my own experience to make it easy and manageable.</div>
+            </div>
+            <div class="learn-item">
+                <div class="learn-heading"><i class="fa-solid fa-globe"
+                        style="color: #292929;font-size:28px; margin-bottom:5px;"></i></i><br>Product Research, Website
+                    Designing, and Meta Ads</div>
+                <div class="learn-content">To succeed in dropshipping, you must master product research, website design,
+                    and advertising. This lesson will guide you in identifying trending products for the Indian market,
+                    building a professional Shopify website, and creating effective Meta ads to drive traffic and sales.
+                </div>
+            </div>
+            <div class="learn-item">
+                <div class="learn-heading"><i class="fa-solid fa-chart-line"
+                        style="color: #292929;font-size:28px; margin-bottom:5px;"></i></i><br>How You Make Money and
+                    Potential Income</div>
+                <div class="learn-content">Let’s talk about making money! This lesson covers the dropshipping cash flow
+                    cycle, from ad investments to payouts. We'll explore income potential in India, share success
+                    stories, and help you set financial goals for 2024 to turn your business into a profitable venture.
+                </div>
+            </div>
+        </div>
+        <div class="learn-reg-btn">
+            <button class="register-btn">Register Webinar</button>
+        </div>
+    </div>
+
+    <div class="mentor">
+        <div class="mentor-details">
+            <div class="mentor-head">Meet Your <span style="color: #0d5ee8;">Mentor</span></div>
+            <div class="mentor-name">Hi, I'm Tamilalagan, an ecommerce entrepreneur, content creator & a mentor to
+                2,000+ students</div>
+            <div class="mentor-content">
+                <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've spent over ₹15
+                    CR on ecommerce marketing.</p>
+                <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've launched and
+                    scaled businesses in USA, UK, India, Canada, Australia, Germany, and Netherlands.</p>
+                <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've learned from
+                    high level international mentors who have generated over ₹15,000 Crores in revenue.</p>
+                <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> And now I believe
+                    the ambitious Indians need to learn how to take charge of their own financial life.</p>
+
+            </div>
+        </div>
+        <div class="mentor-img">
+            <img src="assests\header_img\mentor_img.jpg">
+        </div>
+    </div>
+
+    <div class="why-webinar">
+        <div class="why-heading">Why Should You Attend This Workshop?</div>
+        <div class="why-container">
+            <div class="why-card">
+                <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> Tired of Living
+                    Paycheck to Paycheck</div>
+                <div class="why-card-content">Say goodbye to the grind. No more financial stress. No more daily bank
+                    account check-ins.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> You'll Master
+                    More Than 5 High-Paying Skills</div>
+                <div class="why-card-content">You'll learn how to run a business, but moreover, you'll learn skills that
+                    will never let you go broke ever again.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> You Want To
+                    Prove Yourself</div>
+                <div class="why-card-content">I got tired of people not believing in me, so I proved them wrong. Now,
+                    it's your turn.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> Freedom, Cash,
+                    Peace of Mind</div>
+                <div class="why-card-content">If these 3 things are on the top of your priority list, an investment
+                    worth a slice of pizza is worth finding out what you can achieve..</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const carouselSlide = document.querySelector(".carousel-slide");
+        const images = document.querySelectorAll(".carousel-slide img");
+        let counter = 0;
+        const size = images[0].clientWidth;
+
+        function autoSlide() {
+            counter = (counter + 1) % images.length; // Loop back to the first image
+            carouselSlide.style.transform = `translateX(${-counter * size}px)`;
+        }
+
+        // Auto-slide every 3 seconds
+        setInterval(autoSlide, 3000);
+
+        // Adjust slide size on window resize
+        window.addEventListener("resize", () => {
+            carouselSlide.style.transition = "none"; // Temporarily disable transition
+            carouselSlide.style.transform = `translateX(${-counter * images[0].clientWidth}px)`;
+            setTimeout(() => carouselSlide.style.transition = "transform 0.5s ease-in-out", 100);
+        });
+    });
+
+
+</script>
+
+</html>
