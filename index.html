@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         * {
             box-sizing: border-box;
@@ -17,19 +18,31 @@
             padding-left: 90px;
             padding-right: 90px;
         }
+        section{
+            display: grid;
+            place-items: center;
+            align-content: center;
+        }
 
         .header {
             display: flex;
             justify-content: space-between;
-            /* Push elements to the opposite ends */
             align-items: center;
+            width: 100%;
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
         }
 
         .header p {
             margin: 0;
             font-size: 30px;
             font-weight: 700;
-            padding: 15px 0px 25px 0px;
+            padding: 15px 0px 15px 0px;
             color: #424242;
             margin-left: 10px;
         }
@@ -416,18 +429,24 @@
 
             .hero-btns{
                 display: flex;
+                justify-content: center;
+                width: 100%;
+                gap: 10px;
+            }
+            .hero-btns a{
+                width: 45%;
             }
             .explore-btn {
                 margin-top: 15px;
-                width: 90%;
+                width: 100%;
                 font-size: 16px;
                 padding: 5px 10px 5px 10px;
                 height: fit-content;
             }
 
             .register-btn {
-                margin-bottom: 10px;
                 width: 45%;
+                margin-bottom: 10px;
                 margin-left: 0px;
                 font-size: 16px;
                 padding: 5px 10px 5px 10px;
@@ -545,12 +564,15 @@
 </head>
 
 <body>
+    <section>
     <div class="header">
         <p>ZEYONE</p>
         <button>Register Webinar</button>
     </div>
+    </section>
+    <section>
     <div class="hero-container">
-        <div class="hero-text">
+        <div class="hero-text hidden">
             <div class="hero-heading">Become Top 1% in the AI-First World</div>
             <div class="hero-content">Whether it is Product, Growth, Design, Business, Tech or Data, GrowthSchool is the
                 place to learn from top experts in the field to become the Top 1%</div>
@@ -561,7 +583,7 @@
 
         </div>
 
-        <div class="hero-img">
+        <div class="hero-img hidden">
             <div class="carousel-container">
                 <div class="carousel-slide">
                     <img src="assests\header_img\header_img1.png" alt="Image 1">
@@ -571,10 +593,11 @@
             </div>
         </div>
     </div>
+</section>
 
-<section id="about-webinar">
+<section>
     <div class="about-webinar" id="about-webinar">
-        <div class="about-content">
+        <div class="about-content hidden">
             <div class="about-heading">Learn How to Earn With an Ecommerce Business With Just a Laptop & WiFi - All From
                 Your Own Home!</div>
             <div class="about-text">This 3-hour workshop is specifically designed for anyone eager to launch their own
@@ -598,7 +621,7 @@
                 </div>
             </div>
         </div>
-        <div class="about-img">
+        <div class="about-img hidden">
             <video controls poster="assests\header_img\video_cover_img.jpg">
                 <source src="assests\videos\cover_video.mp4" type="video/mp4">
             </video>
@@ -606,11 +629,12 @@
     </div>
     </section>
 
+    <section>
     <div class="learn-part">
         <div class="learn-part-head">What will you Learn?</div>
 
         <div class="learn">
-            <div class="learn-item">
+            <div class="learn-item hidden">
                 <div class="learn-heading"><i class="fa-regular fa-file-lines"
                         style="color: #292929;font-size:28px; margin-bottom:5px;"></i><br>What, Who, Why, and When of
                     Indian Dropshipping</div>
@@ -618,7 +642,7 @@
                     it a low-risk option for job seekers, stay-at-home moms, and students. With India’s booming
                     e-commerce market, now is the perfect time to start.</div>
             </div>
-            <div class="learn-item">
+            <div class="learn-item hidden">
                 <div class="learn-heading"><i class="fa-solid fa-cart-shopping"
                         style="color: #292929;font-size:28px; margin-bottom:5px;"></i></i><br>Understanding the
                     Dropshipping Process</div>
@@ -626,7 +650,7 @@
                     step-by-step, covering product research, choosing what to sell, and setting up a Shopify website. No
                     tech skills required—I'll share tips from my own experience to make it easy and manageable.</div>
             </div>
-            <div class="learn-item">
+            <div class="learn-item hidden">
                 <div class="learn-heading"><i class="fa-solid fa-globe"
                         style="color: #292929;font-size:28px; margin-bottom:5px;"></i></i><br>Product Research, Website
                     Designing, and Meta Ads</div>
@@ -635,7 +659,7 @@
                     building a professional Shopify website, and creating effective Meta ads to drive traffic and sales.
                 </div>
             </div>
-            <div class="learn-item">
+            <div class="learn-item hidden">
                 <div class="learn-heading"><i class="fa-solid fa-chart-line"
                         style="color: #292929;font-size:28px; margin-bottom:5px;"></i></i><br>How You Make Money and
                     Potential Income</div>
@@ -646,12 +670,14 @@
             </div>
         </div>
         <div class="learn-reg-btn">
-            <button class="register-btn">Register Webinar</button>
+            <button class="register-btn1">Register Webinar</button>
         </div>
     </div>
+</section>
 
+<section>
     <div class="mentor">
-        <div class="mentor-details">
+        <div class="mentor-details hidden">
             <div class="mentor-head">Meet Your <span style="color: #0d5ee8;">Mentor</span></div>
             <div class="mentor-name">Hi, I'm Tamilalagan, an ecommerce entrepreneur, content creator & a mentor to
                 2,000+ students</div>
@@ -667,33 +693,35 @@
 
             </div>
         </div>
-        <div class="mentor-img">
+        <div class="mentor-img hidden">
             <img src="assests\header_img\mentor_img.jpg">
         </div>
     </div>
+</section>
 
+<section class="hidden">
     <div class="why-webinar">
         <div class="why-heading">Why Should You Attend This Workshop?</div>
         <div class="why-container">
-            <div class="why-card">
+            <div class="why-card hidden">
                 <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> Tired of Living
                     Paycheck to Paycheck</div>
                 <div class="why-card-content">Say goodbye to the grind. No more financial stress. No more daily bank
                     account check-ins.</div>
             </div>
-            <div class="why-card">
+            <div class="why-card hidden">
                 <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> You'll Master
                     More Than 5 High-Paying Skills</div>
                 <div class="why-card-content">You'll learn how to run a business, but moreover, you'll learn skills that
                     will never let you go broke ever again.</div>
             </div>
-            <div class="why-card">
+            <div class="why-card hidden">
                 <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> You Want To
                     Prove Yourself</div>
                 <div class="why-card-content">I got tired of people not believing in me, so I proved them wrong. Now,
                     it's your turn.</div>
             </div>
-            <div class="why-card">
+            <div class="why-card hidden">
                 <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> Freedom, Cash,
                     Peace of Mind</div>
                 <div class="why-card-content">If these 3 things are on the top of your priority list, an investment
@@ -701,6 +729,7 @@
             </div>
         </div>
     </div>
+</section>
 </body>
 
 <script>
@@ -726,6 +755,19 @@
         });
     });
 
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry) =>{
+            console.log(entry)
+            if(entry.isIntersecting){
+                entry.target.classList.add('show');
+            }else{
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+    
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
 
 </script>
 
