@@ -413,23 +413,29 @@
             .hero-img{
                 display: none;
             }
+
+            .hero-btns{
+                display: flex;
+            }
             .explore-btn {
                 margin-top: 15px;
-                width: 60%;
+                width: 90%;
                 font-size: 16px;
-                padding: 8px 10px 8px 10px;
+                padding: 5px 10px 5px 10px;
+                height: fit-content;
             }
 
             .register-btn {
                 margin-bottom: 10px;
-                width: 60%;
+                width: 45%;
                 margin-left: 0px;
                 font-size: 16px;
-                padding: 8px 10px 8px 10px;
+                padding: 5px 10px 5px 10px;
+                height: fit-content;
             }
             .about-webinar {
-                display: block;
                 margin-top: 0px;
+                flex-direction: column;
             } 
             .about-heading {
                 font-size: 22px;
@@ -437,11 +443,26 @@
             }
             .about-content {
                 width: 100%;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
+                order: 2;
+                margin-top: 10px;
             }
             .about-text {
                 font-size: 16px;
                 margin-top: 5px;
+            }
+            .about-details {
+                flex-direction: column;
+            }
+            .details {
+                order: 1; 
+                width: 100%;
+                padding-left: 0px;
+            }
+        
+            .pricing {
+                order: 2; 
+                width: 100%;
             }
 
             .register-btn1 {
@@ -452,6 +473,7 @@
             }
             .about-img {
                 width: 100%;
+                order: 1;
             }
             .about-img video {
                 margin-left: 0px;
@@ -532,7 +554,7 @@
             <div class="hero-heading">Become Top 1% in the AI-First World</div>
             <div class="hero-content">Whether it is Product, Growth, Design, Business, Tech or Data, GrowthSchool is the
                 place to learn from top experts in the field to become the Top 1%</div>
-            <div>
+            <div class="hero-btns">
                 <a href="#about-webinar"><button class="explore-btn">Explore Webinar</button></a>
                 <button class="register-btn">Register Webinar</button>
             </div>
