@@ -142,32 +142,32 @@
 
         .hero-img {
             width: 40%;
-            /* Match image width */
             position: relative;
             overflow: hidden;
             border-radius: 20px;
             margin-left: 20px;
         }
-
+        
         .carousel-container {
             position: relative;
             width: 100%;
-            /* Match the container width to the image width */
             height: auto;
             overflow: hidden;
-            /* Hide any overflowing images */
         }
-
+        
         .carousel-slide {
             display: flex;
             transition: transform 0.5s ease-in-out;
+            justify-content: flex-start; /* Ensures images align correctly */
         }
-
+        
         .carousel-slide img {
-            width: 100%;
-            /* Images should take full width of the container */
+            width: 100%; /* Ensures images scale to the container */
             height: auto;
-            flex-shrink: 0;
+            flex-shrink: 0; /* Prevents images from shrinking */
+            margin: 0; /* Remove any margin */
+            padding: 0; /* Remove any padding */
+            box-sizing: border-box; /* Avoid width miscalculation */
         }
 
         .about-webinar {
@@ -384,7 +384,7 @@
         }
 
         .course-structure{
-            margin-top: 100px;
+            margin-top: 80px;
         }
 
         .clouse-struc-heading{
@@ -396,37 +396,33 @@
 
         @media only screen and (max-width: 767px) {
             body {
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-left: 0px;
+                padding-right: 0px;
             }
 
             .header {
                 flex-direction: column;
-                /* Stack elements vertically */
                 align-items: flex-start;
-                /* Align elements to the left */
                 text-align: left;
+                padding: 0px 20px 0px 20px;
             }
 
             .header p {
                 font-size: 24px;
-                /* Adjust font size for mobile */
                 margin-left: 0;
-                /* Remove extra left margin */
             }
 
             .header button {
                 width: 100%;
-                /* Make the button full width */
                 text-align: center;
                 margin-top: 10px;
                 display: none;
-                /* Add spacing between the text and button */
             }
 
             .hero-container {
                 padding: 25px;
                 background: #0081FB;
+                border-radius: 0px;
             }
 
             .hero-text {
@@ -451,35 +447,37 @@
 
             .hero-btns {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
+                
                 width: 100%;
                 gap: 10px;
             }
 
             .hero-btns a {
-                width: 45%;
+                width: 48%;
             }
 
             .explore-btn {
                 margin-top: 15px;
                 width: 100%;
                 font-size: 16px;
-                padding: 5px 10px 5px 10px;
+                padding: 5px 20px 5px 20px;
                 height: fit-content;
             }
 
             .register-btn {
-                width: 45%;
+                width: 48%;
                 margin-bottom: 10px;
                 margin-left: 0px;
                 font-size: 16px;
-                padding: 5px 10px 5px 10px;
+                padding: 5px 20px 5px 20px;
                 height: fit-content;
             }
 
             .about-webinar {
                 margin-top: 0px;
                 flex-direction: column;
+                padding: 20px 20px 0px 20px;
             }
 
             .about-heading {
@@ -531,6 +529,10 @@
                 margin-left: 0px;
             }
 
+            .learn-part{
+                padding: 0px 20px 0px 20px;
+            }
+
             .learn-part-head {
                 font-size: 28px;
                 font-weight: 700;
@@ -572,6 +574,7 @@
             .mentor {
                 display: block;
                 margin-top: 50px;
+                padding: 0px 20px 0px 20px;
             }
 
             .mentor-name {
@@ -580,6 +583,10 @@
 
             .mentor-content {
                 font-size: 15px;
+            }
+
+            .why-webinar{
+                padding: 0px 20px 0px 20px;
             }
 
             .why-heading {
@@ -914,23 +921,28 @@
         const carouselSlide = document.querySelector(".carousel-slide");
         const images = document.querySelectorAll(".carousel-slide img");
         let counter = 0;
-        const size = images[0].clientWidth;
-
+    
+        function updateSize() {
+            return images[0].clientWidth;
+        }
+    
         function autoSlide() {
+            const size = updateSize(); // Get the current size of the images
             counter = (counter + 1) % images.length; // Loop back to the first image
             carouselSlide.style.transform = `translateX(${-counter * size}px)`;
         }
-
+    
+        // Resize listener for responsive behavior
+        window.addEventListener("resize", () => {
+            const size = updateSize();
+            carouselSlide.style.transform = `translateX(${-counter * size}px)`;
+        });
+    
         // Auto-slide every 3 seconds
         setInterval(autoSlide, 3000);
-
-        // Adjust slide size on window resize
-        window.addEventListener("resize", () => {
-            carouselSlide.style.transition = "none"; // Temporarily disable transition
-            carouselSlide.style.transform = `translateX(${-counter * images[0].clientWidth}px)`;
-            setTimeout(() => carouselSlide.style.transition = "transform 0.5s ease-in-out", 100);
-        });
     });
+
+       
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

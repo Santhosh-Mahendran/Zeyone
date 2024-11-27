@@ -2,10 +2,11 @@
 .timeline {
     width: 100%;
     background: #fff;
-    padding: 50px 50px;
+    padding: 60px 50px 10px 50px;
     position: relative;
     box-shadow: 0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    margin-bottom: 40px;
 }
 .timeline:before {
     content: '';
@@ -49,13 +50,15 @@
 .entry .title h3 {
     margin: 0;
     font-size: 120%;
+    color: rgb(27, 44, 130);
+    text-align: right;
 }
 .entry .title p {
     margin: 0;
     font-size: 100%;
 }
 .entry .body {
-    margin: 0 0 3em;
+    margin: 0 0 2em;
     float: right;
     width: 66%;
     padding-left: 30px;
@@ -77,16 +80,26 @@
 
 @media only screen and (max-width: 767px) {
     .timeline {
-        padding: 20px 10px;
+        padding: 40px 15px 0px 15px;
     }
     .entry .title h3 {
         margin: 0;
-        font-size: 90%;
+        font-size: 16px;
+        text-align: center;
+        color: rgb(27, 44, 130);
     }
     .timeline:before {
         left: calc(29.5% + 15px);
     }
     .entry .body ul {
+        display: none;
         font-size: 14px;
+    }
+    .course-structure {
+        margin-top: 50px;
+        padding: 0px 20px 0px 20px;
+    }
+    .entry .title {
+        padding-right: 20px;
     }
 }
