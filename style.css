@@ -15,9 +15,15 @@
     transition-delay: 200ms;
 }
 .learn-item:nth-child(3){
-    transition-delay: 400ms;
+    transition-delay: 300ms;
 }
 .learn-item:nth-child(4){
+    transition-delay: 400ms;
+}
+.learn-item:nth-child(5){
+    transition-delay: 500ms;
+}
+.learn-item:nth-child(6){
     transition-delay: 600ms;
 }
 
@@ -29,6 +35,12 @@
 }
 .why-card:nth-child(4){
     transition-delay: 600ms;
+}
+.why-card:nth-child(5){
+    transition-delay: 800ms;
+}
+.why-card:nth-child(6){
+    transition-delay: 1000ms;
 }
 
 .about-content{
@@ -43,3 +55,4 @@
 .mentor-img{
     transition-delay: 400ms;
 }
+

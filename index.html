@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="timeline.css">
     <style>
         * {
             box-sizing: border-box;
@@ -18,7 +19,8 @@
             padding-left: 90px;
             padding-right: 90px;
         }
-        section{
+
+        section {
             display: grid;
             place-items: center;
             align-content: center;
@@ -381,61 +383,83 @@
             margin-bottom: 7px;
         }
 
+        .course-structure{
+            margin-top: 100px;
+        }
+
+        .clouse-struc-heading{
+            font-size: 35px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
         @media only screen and (max-width: 767px) {
             body {
-              padding-left: 20px;
-              padding-right: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
             }
-          
+
             .header {
-              flex-direction: column; /* Stack elements vertically */
-              align-items: flex-start; /* Align elements to the left */
-              text-align: left;
+                flex-direction: column;
+                /* Stack elements vertically */
+                align-items: flex-start;
+                /* Align elements to the left */
+                text-align: left;
             }
-          
+
             .header p {
-              font-size: 24px; /* Adjust font size for mobile */
-              margin-left: 0; /* Remove extra left margin */
+                font-size: 24px;
+                /* Adjust font size for mobile */
+                margin-left: 0;
+                /* Remove extra left margin */
             }
-          
+
             .header button {
-              width: 100%; /* Make the button full width */
-              text-align: center;
-              margin-top: 10px;
-              display: none; /* Add spacing between the text and button */
+                width: 100%;
+                /* Make the button full width */
+                text-align: center;
+                margin-top: 10px;
+                display: none;
+                /* Add spacing between the text and button */
             }
 
             .hero-container {
                 padding: 25px;
-                background:#0081FB;
+                background: #0081FB;
             }
+
             .hero-text {
                 width: 100%;
             }
-    
+
             .hero-heading {
                 font-size: 30px;
                 color: white;
                 font-weight: 620;
             }
+
             .hero-content {
                 font-size: 18px;
                 color: white;
                 margin-top: 6px;
             }
-            .hero-img{
+
+            .hero-img {
                 display: none;
             }
 
-            .hero-btns{
+            .hero-btns {
                 display: flex;
                 justify-content: center;
                 width: 100%;
                 gap: 10px;
             }
-            .hero-btns a{
+
+            .hero-btns a {
                 width: 45%;
             }
+
             .explore-btn {
                 margin-top: 15px;
                 width: 100%;
@@ -452,51 +476,61 @@
                 padding: 5px 10px 5px 10px;
                 height: fit-content;
             }
+
             .about-webinar {
                 margin-top: 0px;
                 flex-direction: column;
-            } 
+            }
+
             .about-heading {
                 font-size: 22px;
                 font-weight: 620;
             }
+
             .about-content {
                 width: 100%;
                 margin-bottom: 20px;
                 order: 2;
                 margin-top: 10px;
             }
+
             .about-text {
                 font-size: 16px;
                 margin-top: 5px;
             }
+
             .about-details {
                 flex-direction: column;
             }
+
             .details {
-                order: 1; 
+                order: 1;
                 width: 100%;
                 padding-left: 0px;
             }
-        
+
             .pricing {
-                order: 2; 
+                order: 2;
                 width: 100%;
             }
 
             .register-btn1 {
                 height: 60px;
             }
+
             .webinar-details span {
                 font-size: 15px;
             }
+
             .about-img {
                 width: 100%;
                 order: 1;
             }
+
             .about-img video {
                 margin-left: 0px;
             }
+
             .learn-part-head {
                 font-size: 28px;
                 font-weight: 700;
@@ -504,232 +538,375 @@
                 margin-bottom: 25px;
                 text-align: center;
             }
+
             .learn {
                 display: block;
             }
+
             .learn-item {
-                flex: 1 1 100%; 
-                margin-bottom: 10px; 
+                flex: 1 1 100%;
+                margin-bottom: 10px;
             }
+
             .learn-heading {
                 font-size: 20px;
             }
+
             .learn-content {
                 font-size: 15px;
             }
+
             .mentor-details {
                 width: 100%;
                 padding-right: 0px;
             }
-    
+
             .mentor-img {
                 display: none;
             }
+
             .mentor-head {
                 font-size: 28px;
             }
+
             .mentor {
                 display: block;
                 margin-top: 50px;
             }
+
             .mentor-name {
                 font-size: 19px;
             }
+
             .mentor-content {
                 font-size: 15px;
             }
+
             .why-heading {
                 font-size: 28px;
                 margin-top: 10px;
                 margin-bottom: 25px;
             }
+
             .why-container {
                 display: block;
             }
+
             .why-card {
                 flex: 1 1 100%;
                 margin-bottom: 10px;
             }
+
             .why-card-heading {
                 font-size: 20px;
             }
-            .why-card-content{
+
+            .why-card-content {
                 font-size: 15px;
             }
+
             .header p {
                 padding: 15px 0px 15px 0px;
             }
-          }
+        }
     </style>
 </head>
 
 <body>
     <section>
-    <div class="header">
-        <p>ZEYONE</p>
-        <button>Register Webinar</button>
-    </div>
+        <div class="header">
+            <p>ZEYONE</p>
+            <button>Register Webinar</button>
+        </div>
     </section>
     <section>
-    <div class="hero-container">
-        <div class="hero-text hidden">
-            <div class="hero-heading">Become Top 1% in the AI-First World</div>
-            <div class="hero-content">Whether it is Product, Growth, Design, Business, Tech or Data, GrowthSchool is the
-                place to learn from top experts in the field to become the Top 1%</div>
-            <div class="hero-btns">
-                <a href="#about-webinar"><button class="explore-btn">Explore Webinar</button></a>
-                <button class="register-btn">Register Webinar</button>
-            </div>
-
-        </div>
-
-        <div class="hero-img hidden">
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="assests\header_img\header_img1.png" alt="Image 1">
-                    <img src="assests\header_img\header_img2.png" alt="Image 2">
-                    <img src="assests\header_img\header_img3.png" alt="Image 3">
+        <div class="hero-container">
+            <div class="hero-text hidden">
+                <div class="hero-heading">Master Meta Ads in 30 Days: Grow Your Business or Start a Freelance Career!
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="about-webinar" id="about-webinar">
-        <div class="about-content hidden">
-            <div class="about-heading">Learn How to Earn With an Ecommerce Business With Just a Laptop & WiFi - All From
-                Your Own Home!</div>
-            <div class="about-text">This 3-hour workshop is specifically designed for anyone eager to launch their own
-                ecommerce or dropshipping business, without the hassle of inventory, employees, or a physical office.
-            </div>
-
-            <div class="about-details">
-                <div class="pricing">
-                    <div class="amount">₹199 <span>₹999</span></div>
-                    <button class="register-btn1">Register Webinar</button>
-                    <div class="web-slots">Limited slots</div>
+                <div class="hero-content">Join our hands-on live workshop to learn proven strategies for creating and
+                    managing high-converting Meta ad campaigns for businesses of any size.</div>
+                <div class="hero-btns">
+                    <a href="#about-webinar"><button class="explore-btn">Explore Webinar</button></a>
+                    <button class="register-btn">Register Webinar</button>
                 </div>
-                <div class="details">
-                    <div class="webinar-details"><i class="fa-regular fa-calendar"
-                            style="color: #4d8eff; margin-right:10px"></i><span>Date: 17th November 03:00 PM</span>
+
+            </div>
+
+            <div class="hero-img hidden">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="assests\header_img\header_img1.png" alt="Image 1">
+                        <img src="assests\header_img\header_img2.png" alt="Image 2">
+                        <img src="assests\header_img\header_img3.png" alt="Image 3">
                     </div>
-                    <div class="webinar-details"><i class="fa-regular fa-hourglass-half"
-                            style="color: #4d8eff; margin-right:10px"></i><span>Duration: 3 Hours</span></div>
-                    <div class="webinar-details"><i class="fa-solid fa-language"
-                            style="color: #4d8eff; margin-right:10px"></i><span>Language: English</span></div>
                 </div>
             </div>
         </div>
-        <div class="about-img hidden">
-            <video controls poster="assests\header_img\video_cover_img.jpg">
-                <source src="assests\videos\cover_video.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div>
     </section>
 
     <section>
-    <div class="learn-part">
-        <div class="learn-part-head">What will you Learn?</div>
+        <div class="about-webinar" id="about-webinar">
+            <div class="about-content hidden">
+                <div class="about-heading">Learn How to Earn With an Ecommerce Business With Just a Laptop & WiFi - All
+                    From
+                    Your Own Home!</div>
+                <div class="about-text">This 3-hour workshop is specifically designed for anyone eager to launch their
+                    own
+                    ecommerce or dropshipping business, without the hassle of inventory, employees, or a physical
+                    office.
+                </div>
 
-        <div class="learn">
-            <div class="learn-item hidden">
-                <div class="learn-heading"><i class="fa-regular fa-file-lines"
-                        style="color: #292929;font-size:28px; margin-bottom:5px;"></i><br>What, Who, Why, and When of
-                    Indian Dropshipping</div>
-                <div class="learn-content">Dropshipping lets you sell products online without holding inventory, making
-                    it a low-risk option for job seekers, stay-at-home moms, and students. With India’s booming
-                    e-commerce market, now is the perfect time to start.</div>
-            </div>
-            <div class="learn-item hidden">
-                <div class="learn-heading"><i class="fa-solid fa-cart-shopping"
-                        style="color: #292929;font-size:28px; margin-bottom:5px;"></i></i><br>Understanding the
-                    Dropshipping Process</div>
-                <div class="learn-content">Curious about starting a dropshipping store? This lesson will guide you
-                    step-by-step, covering product research, choosing what to sell, and setting up a Shopify website. No
-                    tech skills required—I'll share tips from my own experience to make it easy and manageable.</div>
-            </div>
-            <div class="learn-item hidden">
-                <div class="learn-heading"><i class="fa-solid fa-globe"
-                        style="color: #292929;font-size:28px; margin-bottom:5px;"></i></i><br>Product Research, Website
-                    Designing, and Meta Ads</div>
-                <div class="learn-content">To succeed in dropshipping, you must master product research, website design,
-                    and advertising. This lesson will guide you in identifying trending products for the Indian market,
-                    building a professional Shopify website, and creating effective Meta ads to drive traffic and sales.
+                <div class="about-details">
+                    <div class="pricing">
+                        <div class="amount">₹199 <span>₹999</span></div>
+                        <button class="register-btn1">Register Webinar</button>
+                        <div class="web-slots">Limited slots</div>
+                    </div>
+                    <div class="details">
+                        <div class="webinar-details"><i class="fa-regular fa-calendar"
+                                style="color: #4d8eff; margin-right:10px"></i><span>Date: 17th November 03:00 PM</span>
+                        </div>
+                        <div class="webinar-details"><i class="fa-regular fa-hourglass-half"
+                                style="color: #4d8eff; margin-right:10px"></i><span>Duration: 3 Hours</span></div>
+                        <div class="webinar-details"><i class="fa-solid fa-language"
+                                style="color: #4d8eff; margin-right:10px"></i><span>Language: English</span></div>
+                    </div>
                 </div>
             </div>
-            <div class="learn-item hidden">
-                <div class="learn-heading"><i class="fa-solid fa-chart-line"
-                        style="color: #292929;font-size:28px; margin-bottom:5px;"></i></i><br>How You Make Money and
-                    Potential Income</div>
-                <div class="learn-content">Let’s talk about making money! This lesson covers the dropshipping cash flow
-                    cycle, from ad investments to payouts. We'll explore income potential in India, share success
-                    stories, and help you set financial goals for 2024 to turn your business into a profitable venture.
+            <div class="about-img hidden">
+                <video controls poster="assests\header_img\video_cover_img.jpg">
+                    <source src="assests\videos\cover_video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="learn-part">
+            <div class="learn-part-head">What you will learn in this workshop?</div>
+
+            <div class="learn">
+                <div class="learn-item hidden">
+                    <div class="learn-heading"><i class="fa-regular fa-file-lines"
+                            style="color: #292929;font-size:28px; margin-bottom:5px;"></i><br>Launch Effective Campaigns
+                    </div>
+                    <div class="learn-content">Learn how to plan, execute, and optimize ad campaigns to achieve maximum
+                        reach, engagement, and conversions.</div>
+                </div>
+                <div class="learn-item hidden">
+                    <div class="learn-heading"><i class="fa-solid fa-rectangle-ad"
+                            style="color: #292929;font-size:28px; margin-bottom:5px;"></i><br>Run Ads for Your Own
+                        Business</div>
+                    <div class="learn-content">Gain the skills to independently create and manage high-performing Meta
+                        (Facebook and Instagram) ad campaigns to grow your business and drive sales.
+                    </div>
+                </div>
+                <div class="learn-item hidden">
+                    <div class="learn-heading"><i class="fa-solid fa-globe"
+                            style="color: #292929;font-size:28px; margin-bottom:5px;"></i><br>Become a Freelance
+                        Advertiser/ Media Buyer</div>
+                    <div class="learn-content">Start your journey as a freelance advertiser/media buyer, helping
+                        businesses achieve their marketing goals and earning a steady income.
+                    </div>
+                </div>
+                <div class="learn-item hidden">
+                    <div class="learn-heading"><i class="fa-solid fa-bullseye"
+                            style="color: #292929;font-size:28px; margin-bottom:5px;"></i><br>Understand Ad Targeting
+                    </div>
+                    <div class="learn-content">Gain expertise in Facebook’s advanced targeting options to reach the
+                        right audience with precision.
+                    </div>
+                </div>
+                <div class="learn-item hidden">
+                    <div class="learn-heading"><i class="fa-solid fa-users"
+                            style="color: #292929;font-size:28px; margin-bottom:5px;"></i><br>Supportive Community
+                    </div>
+                    <div class="learn-content">Connect with other participants to share experiences, learn
+                        collaboratively, and grow together.
+                    </div>
+                </div>
+                <div class="learn-item hidden">
+                    <div class="learn-heading"><i class="fa-solid fa-money-bills"
+                            style="color: #292929;font-size:28px; margin-bottom:5px;"></i><br>Achieve Financial
+                        Independence
+                    </div>
+                    <div class="learn-content">Whether growing your own business or working as a freelancer, this
+                        workshop equips you to generate consistent income using Meta Ads.
+                    </div>
+                </div>
+            </div>
+            <div class="learn-reg-btn">
+                <button class="register-btn1">Register Webinar</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mentor">
+            <div class="mentor-details hidden">
+                <div class="mentor-head">Meet Your <span style="color: #0d5ee8;">Mentor</span></div>
+                <div class="mentor-name">Hi, I'm Tamilalagan, an ecommerce entrepreneur, content creator & a mentor to
+                    2,000+ students</div>
+                <div class="mentor-content">
+                    <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've spent over
+                        ₹15
+                        CR on ecommerce marketing.</p>
+                    <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've launched
+                        and
+                        scaled businesses in USA, UK, India, Canada, Australia, Germany, and Netherlands.</p>
+                    <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've learned
+                        from
+                        high level international mentors who have generated over ₹15,000 Crores in revenue.</p>
+                    <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> And now I
+                        believe
+                        the ambitious Indians need to learn how to take charge of their own financial life.</p>
+
+                </div>
+            </div>
+            <div class="mentor-img hidden">
+                <img src="assests\header_img\mentor_img.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="hidden">
+        <div class="why-webinar">
+            <div class="why-heading">Why Should You Attend This Workshop?</div>
+            <div class="why-container">
+                <div class="why-card hidden">
+                    <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> Learn from
+                        Live Session</div>
+                    <div class="why-card-content">Gain insider tips and proven strategies from an expert with hands-on
+                        live sessions in Meta Ads.</div>
+                </div>
+                <div class="why-card hidden">
+                    <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i>Applicable
+                        for Everyone</div>
+                    <div class="why-card-content">Whether you're a business owner, student or an aspiring freelancer,
+                        this workshop is tailored for all skill levels.</div>
+                </div>
+                <div class="why-card hidden">
+                    <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i>Hands-On
+                        Learning</div>
+                    <div class="why-card-content">Practice in real-time with actionable exercises and live
+                        demonstrations.</div>
+                </div>
+                <div class="why-card hidden">
+                    <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i>Save Time and
+                        Money</div>
+                    <div class="why-card-content">Avoid trial-and-error and learn what works directly from an
+                        experienced mentor.</div>
+                </div>
+
+                <div class="why-card hidden">
+                    <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i>Exclusive
+                        Resources</div>
+                    <div class="why-card-content">Receive templates, guides, and lifetime access to recorded sessions
+                        for future reference.</div>
+                </div>
+
+                <div class="why-card hidden">
+                    <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i>Unlock Career
+                        Opportunities</div>
+                    <div class="why-card-content">Start your journey as a freelance advertiser/media buyer or enhance
+                        your marketing career with in-demand skills.</div>
                 </div>
             </div>
         </div>
-        <div class="learn-reg-btn">
-            <button class="register-btn1">Register Webinar</button>
+    </section>
+
+    <div class="course-structure">
+        <div class="clouse-struc-heading">Course Structure</div>
+
+        <div class="timeline">
+            <div class="entry">
+                <div class="title">
+                    <h3>Day 1-5</h3>
+                </div>
+                <div class="body">
+                    <p>Fundamentals of Meta Ads</p>
+                    <ul>
+                        <li>Overview of Meta (Facebook and Instagram) advertising.</li>
+                        <li>Understanding ad policies and account setup.</li>
+                        <li>Introduction to Ads Manager and key metrics</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="title">
+                    <h3>Day 6-10</h3>
+                </div>
+                <div class="body">
+                    <p>Audience Targeting</p>
+                    <ul>
+                        <li>How to define and create Custom Audiences.</li>
+                        <li>Using Lookalike Audiences to scale campaigns.</li>
+                        <li>Understanding demographic, interest, and behavior-based targeting.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="title">
+                    <h3>Day 11-15</h3>
+                </div>
+                <div class="body">
+                    <p>Ad Creatives That Convert</p>
+                    <ul>
+                        <li>Crafting eye-catching visuals and compelling copy.</li>
+                        <li>Designing ad formats: carousel, video, and dynamic ads.</li>
+                        <li>Tools for creating professional ad creatives.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="title">
+                    <h3>Day 16-20</h3>
+                </div>
+                <div class="body">
+                    <p>Campaign Setup and Optimization
+                    </p>
+                    <ul>
+                        <li>Setting up conversion campaigns for lead generation and sales.</li>
+                        <li>Budgeting and bidding strategies.</li>
+                        <li>Split testing and optimization techniques.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="title">
+                    <h3>Day 21-25</h3>
+                </div>
+                <div class="body">
+                    <p>Analytics and Scaling
+                    </p>
+                    <ul>
+                        <li>Reading and analyzing campaign performance.</li>
+                        <li>Key performance indicators (KPIs) to track.</li>
+                        <li>Scaling winning campaigns without overspending</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="title">
+                    <h3>Day 26-30</h3>
+                </div>
+                <div class="body">
+                    <p>Freelancing as a Media Buyer
+                    </p>
+                    <ul>
+                        <li>How to find and pitch to clients.</li>
+                        <li>Building long-term client relationships.</li>
+                        <li>Managing multiple ad accounts like a pro.</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
-</section>
 
-<section>
-    <div class="mentor">
-        <div class="mentor-details hidden">
-            <div class="mentor-head">Meet Your <span style="color: #0d5ee8;">Mentor</span></div>
-            <div class="mentor-name">Hi, I'm Tamilalagan, an ecommerce entrepreneur, content creator & a mentor to
-                2,000+ students</div>
-            <div class="mentor-content">
-                <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've spent over ₹15
-                    CR on ecommerce marketing.</p>
-                <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've launched and
-                    scaled businesses in USA, UK, India, Canada, Australia, Germany, and Netherlands.</p>
-                <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've learned from
-                    high level international mentors who have generated over ₹15,000 Crores in revenue.</p>
-                <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> And now I believe
-                    the ambitious Indians need to learn how to take charge of their own financial life.</p>
-
-            </div>
-        </div>
-        <div class="mentor-img hidden">
-            <img src="assests\header_img\mentor_img.jpg">
-        </div>
-    </div>
-</section>
-
-<section class="hidden">
-    <div class="why-webinar">
-        <div class="why-heading">Why Should You Attend This Workshop?</div>
-        <div class="why-container">
-            <div class="why-card hidden">
-                <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> Tired of Living
-                    Paycheck to Paycheck</div>
-                <div class="why-card-content">Say goodbye to the grind. No more financial stress. No more daily bank
-                    account check-ins.</div>
-            </div>
-            <div class="why-card hidden">
-                <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> You'll Master
-                    More Than 5 High-Paying Skills</div>
-                <div class="why-card-content">You'll learn how to run a business, but moreover, you'll learn skills that
-                    will never let you go broke ever again.</div>
-            </div>
-            <div class="why-card hidden">
-                <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> You Want To
-                    Prove Yourself</div>
-                <div class="why-card-content">I got tired of people not believing in me, so I proved them wrong. Now,
-                    it's your turn.</div>
-            </div>
-            <div class="why-card hidden">
-                <div class="why-card-heading"><i class="fa-solid fa-star" style="margin-right:5px"></i> Freedom, Cash,
-                    Peace of Mind</div>
-                <div class="why-card-content">If these 3 things are on the top of your priority list, an investment
-                    worth a slice of pizza is worth finding out what you can achieve..</div>
-            </div>
-        </div>
-    </div>
-</section>
 </body>
 
 <script>
@@ -755,19 +932,19 @@
         });
     });
 
-    const observer = new IntersectionObserver((entries)=>{
-        entries.forEach((entry) =>{
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
             console.log(entry)
-            if(entry.isIntersecting){
+            if (entry.isIntersecting) {
                 entry.target.classList.add('show');
-            }else{
-                entry.target.classList.remove('show');
             }
         });
     });
-    
+
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
+
+
 
 </script>
 
