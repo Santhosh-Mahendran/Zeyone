@@ -297,7 +297,8 @@
             flex: 1 1 calc(50% - 10px);
             background-color: #edf2ff;
             padding: 20px;
-            border-radius: 10px;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         }
 
         .learn-heading {
@@ -375,6 +376,7 @@
             background-color: #edf2ff;
             padding: 20px;
             border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         }
 
         .why-card-heading {
@@ -422,7 +424,7 @@
 
             .hero-container {
                 padding: 25px;
-                background: #0081FB;
+                background: linear-gradient(119deg, rgb(38 27 255) 0%, rgb(59 59 255) 55%, rgb(0 222 255) 100%);
                 border-radius: 0px;
             }
 
@@ -441,6 +443,8 @@
                 font-size: 14px;
                 color: white;
                 margin-top: 6px;
+                margin-bottom: 15px;
+                text-align: center;
             }
 
             .hero-img {
@@ -468,10 +472,10 @@
             }
 
             .register-btn {
-                width: 48%;
-                margin-bottom: 10px;
+                width: 100%;
                 margin-left: 0px;
-                font-size: 14px;
+                margin-top: 8px;
+                font-size: 18px;
                 padding: 5px 25px 5px 25px;
                 height: fit-content;
             }
@@ -493,6 +497,7 @@
                 margin-bottom: 20px;
                 order: 2;
                 margin-top: 10px;
+                text-align: center;
             }
 
             .about-text {
@@ -530,6 +535,7 @@
             .about-img {
                 width: 100%;
                 order: 1;
+                margin-bottom: 0px;
             }
 
             .about-img video {
@@ -618,7 +624,7 @@
             .why-card-content {
                 font-size: 15px;
             }
-
+           
             
         }
     </style>
@@ -639,7 +645,6 @@
                 <div class="hero-content">Join our live workshop to learn proven strategies for creating and
                     managing high-converting Meta ad campaigns.</div>
                 <div class="hero-btns">
-                    <a href="#about-webinar"><button class="explore-btn">Explore Webinar</button></a>
                     <button class="register-btn">Register Webinar</button>
                 </div>
 
@@ -966,6 +971,30 @@
     hiddenElements.forEach((el) => observer.observe(el));
 
 
+    document.addEventListener("DOMContentLoaded", function () {
+        function adjustLayout() {
+            const aboutImg = document.querySelector(".about-img");
+            const heroBtns = document.querySelector(".hero-btns");
+    
+            if (window.innerWidth <= 768) {
+                if (aboutImg && heroBtns) {
+                    // Move the about-img div before hero-btns
+                    heroBtns.parentNode.insertBefore(aboutImg, heroBtns);
+                }
+            } else {
+                // Reset the layout if needed (optional, only if rearrangement is permanent)
+                const aboutSection = document.querySelector(".about-webinar");
+                if (aboutSection && aboutImg) {
+                    aboutSection.appendChild(aboutImg);
+                }
+            }
+        }
+    
+        // Adjust layout on page load and window resize
+        adjustLayout();
+        window.addEventListener("resize", adjustLayout);
+    });
+    
 
 </script>
 
