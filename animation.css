@@ -1,0 +1,58 @@
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.learn-item:nth-child(2){
+    transition-delay: 100ms;
+}
+.learn-item:nth-child(3){
+    transition-delay: 150ms;
+}
+.learn-item:nth-child(4){
+    transition-delay: 200ms;
+}
+.learn-item:nth-child(5){
+    transition-delay: 250ms;
+}
+.learn-item:nth-child(6){
+    transition-delay: 300ms;
+}
+
+.why-card:nth-child(2){
+    transition-delay: 200ms;
+}
+.why-card:nth-child(3){
+    transition-delay: 400ms;
+}
+.why-card:nth-child(4){
+    transition-delay: 600ms;
+}
+.why-card:nth-child(5){
+    transition-delay: 800ms;
+}
+.why-card:nth-child(6){
+    transition-delay: 1000ms;
+}
+
+.about-content{
+    transition-delay: 200ms;
+}
+.about-img{
+    transition-delay: 400ms;
+}
+.mentor-details{
+    transition-delay: 200ms;
+}
+.mentor-img{
+    transition-delay: 400ms;
+}
+

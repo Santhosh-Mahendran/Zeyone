@@ -8,629 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="timeline.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Segoe UI";
-            margin: 0;
-            padding-left: 90px;
-            padding-right: 90px;
-        }
-
-        section {
-            display: grid;
-            place-items: center;
-            align-content: center;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        .header-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-
-        .header p {
-            margin: 0;
-            font-size: 30px;
-            font-weight: 700;
-            padding: 15px 0px 15px 0px;
-            color: #424242;
-            margin-left: 10px;
-        }
-
-        .header button {
-
-            display: inline-block;
-            outline: 0;
-            cursor: pointer;
-            border-radius: 6px;
-            border: 1px solid #222222;
-            color: #222222;
-            background-color: #fff;
-            padding: 8px 15px 8px 15px;
-            box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
-            font-size: 18px;
-            height: 42px;
-
-
-        }
-
-        .header button:hover {
-            background: 0 0;
-            color: #fff;
-            background-color: rgb(62, 53, 231);
-        }
-
-        .hero-container {
-            width: 100%;
-            display: flex;
-            padding: 60px;
-            background: rgb(11, 0, 205);
-            background: linear-gradient(90deg, rgb(25, 13, 253) 0%, rgba(44, 44, 221, 1) 35%, rgba(0, 177, 255, 1) 100%);
-            overflow: hidden;
-            border-radius: 30px;
-        }
-
-        .hero-text {
-            width: 60%;
-        }
-
-        .hero-heading {
-            font-size: 40px;
-            color: white;
-            font-weight: 620;
-        }
-
-        .hero-content {
-            font-size: 20px;
-            color: white;
-        }
-
-        .explore-btn {
-            display: inline-block;
-            outline: 0;
-            cursor: pointer;
-            border-radius: 6px;
-            border: none;
-            color: #222222;
-            background-color: #fff;
-            padding: 8px 15px 8px 15px;
-            box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
-            font-size: 18px;
-            height: 42px;
-            margin-top: 15px;
-        }
-
-        .explore-btn:hover {
-            background: 0 0;
-            color: #fff;
-            background-color: rgb(107, 103, 176);
-        }
-
-        .register-btn {
-            display: inline-block;
-            outline: 0;
-            cursor: pointer;
-            border-radius: 6px;
-            border: 1px solid #ff753a;
-            color: #fff;
-            background-color: #ff753a;
-            padding: 8px 15px 8px 15px;
-            box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
-            font-size: 18px;
-            height: 42px;
-            margin-top: 15px;
-            margin-left: 5px;
-        }
-
-        .register-btn:hover {
-            background: 0 0;
-            color: #ff5b3a;
-            background-color: #fff;
-        }
-        .web-slots{
-            color: red;
-        }
-
-        .hero-img {
-            width: 40%;
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            height: auto;
-            overflow: hidden;
-        }
-        
-        .carousel-slide {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            justify-content: flex-start; /* Ensures images align correctly */
-        }
-        
-        .carousel-slide img {
-            width: 100%; /* Ensures images scale to the container */
-            height: auto;
-            flex-shrink: 0; /* Prevents images from shrinking */
-            margin: 0; /* Remove any margin */
-            padding: 0; /* Remove any padding */
-            box-sizing: border-box; /* Avoid width miscalculation */
-        }
-
-        .about-webinar {
-            display: flex;
-            margin-top: 20px;
-            padding-top: 30px;
-        }
-
-        .about-content {
-            width: 60%;
-            margin-right: 10px;
-        }
-
-        .about-heading {
-            font-size: 30px;
-            font-weight: 620;
-        }
-
-        .about-text {
-            font-size: 18px;
-            margin-top: 5px;
-        }
-
-        .about-details {
-            display: flex;
-            margin-top: 10px;
-        }
-
-        .pricing {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        .details {
-            width: 50%;
-            padding-left: 15px;
-        }
-
-        .amount {
-            font-size: 25px;
-            font-weight: 600;
-        }
-
-        .amount span {
-            text-decoration: line-through;
-            color: #5f5f5f;
-            margin-left: 10px;
-        }
-
-        .webinar-details {
-            display: flex;
-            font-size: 20px;
-            border: 1px solid #0445b5;
-            margin-bottom: 12px;
-            padding: 5px 10px 5px 10px;
-            align-items: center;
-            border-radius: 5px
-        }
-
-        .webinar-details span {
-            font-size: 16px;
-        }
-
-        .web-slots {
-            margin-top: 7px;
-            text-align: center;
-        }
-
-        .register-btn1 {
-            display: inline-block;
-            outline: 0;
-            cursor: pointer;
-            border-radius: 6px;
-            border: 1px solid #ff753a;
-            color: #fff;
-            background-color: #ff753a;
-            padding: 8px 15px 8px 15px;
-            box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
-            font-size: 18px;
-            height: 42px;
-            margin-top: 7px;
-            margin-left: 5px;
-            width: 100%;
-        }
-
-        .register-btn1:hover {
-            background: 0 0;
-            color: #ff5b3a;
-            background-color: #fff;
-        }
-
-        .about-img {
-            width: 50%;
-        }
-
-        .about-img video {
-            width: 100%;
-            border: 3px solid #333;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-            margin-left: 15px;
-        }
-
-        .learn-part-head {
-            font-size: 36px;
-            font-weight: 700;
-            margin-top: 50px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .learn {
-            display: flex;
-            flex-wrap: wrap;
-            /* Allow items to wrap into multiple rows */
-            gap: 10px;
-            /* Space between items */
-        }
-
-        /* Flex properties for each child div */
-        .learn-item {
-            flex: 1 1 calc(50% - 10px);
-            background-color: #edf2ff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-        }
-
-        .learn-heading {
-            font-size: 25px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .learn-content {
-            font-size: 17px;
-        }
-
-        .learn-reg-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .mentor {
-            display: flex;
-            margin-top: 70px;
-        }
-
-        .mentor-details {
-            width: 60%;
-            padding-right: 20px;
-        }
-
-        .mentor-img {
-            width: 40%;
-        }
-
-        .mentor-head {
-            font-size: 33px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .mentor-name {
-            font-size: 22px;
-        }
-
-        .mentor-content {
-            font-size: 17px;
-        }
-
-        .mentor-img img {
-            width: 100%;
-            border: 5px solid #222222;
-            border-radius: 10px;
-        }
-
-        .why-webinar {
-            margin-top: 50px;
-            padding: 10px;
-        }
-
-        .why-heading {
-            font-size: 35px;
-            font-weight: 700;
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-
-        .why-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .why-card {
-            flex: 1 1 calc(50% - 10px);
-            background-color: #edf2ff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-        }
-
-        .why-card-heading {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 7px;
-        }
-
-        .course-structure{
-            margin-top: 80px;
-        }
-
-        .clouse-struc-heading{
-            font-size: 35px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        @media only screen and (max-width: 767px) {
-            body {
-                padding-left: 0px;
-                padding-right: 0px;
-            }
-
-            .header {
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: left;
-                padding: 0px 20px 0px 20px;
-            }
-
-            .header p {
-                font-size: 24px;
-                margin-left: 0;
-                padding: 5px 0px 5px 0px;
-            }
-
-            .header button {
-                width: 100%;
-                text-align: center;
-                margin-top: 10px;
-                display: none;
-            }
-
-            .hero-container {
-                padding: 25px;
-                background: linear-gradient(119deg, rgb(38 27 255) 0%, rgb(59 59 255) 55%, rgb(0 222 255) 100%);
-                border-radius: 0px;
-            }
-
-            .hero-text {
-                width: 100%;
-            }
-
-            .hero-heading {
-                font-size: 22px;
-                color: white;
-                font-weight: 620;
-                text-align: center;
-            }
-
-            .hero-content {
-                font-size: 16px;
-                color: white;
-                margin-top: 15px;
-                margin-bottom: 30px;
-                text-align: center;
-            }
-
-            .hero-img {
-                display: none;
-            }
-
-            .hero-btns {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                gap: 10px;
-                margin-top: 15px;
-            }
-
-            .hero-btns a {
-                width: 48%;
-            }
-
-            .explore-btn {
-                margin-top: 15px;
-                width: 100%;
-                font-size: 14px;
-                padding: 5px 25px 5px 25px;
-                height: fit-content;
-            }
-
-            .register-btn {
-                width: 70%;
-                margin-left: 0px;
-                margin-top: 8px;
-                font-size: 18px;
-                padding: 5px 25px 5px 25px;
-                height: 40px;
-            }
-
-            .about-webinar {
-                margin-top: 0px;
-                flex-direction: column;
-                padding: 20px 20px 0px 20px;
-            }
-
-            .about-heading {
-                font-size: 22px;
-                font-weight: 620;
-                display: none;
-            }
-
-            .about-content {
-                width: 100%;
-                margin-bottom: 20px;
-                order: 2;
-                margin-top: 10px;
-                text-align: center;
-            }
-
-            .about-text {
-                font-size: 16px;
-                margin-top: 5px;
-                display: none;
-            }
-
-            .about-details {
-                flex-direction: column;
-            }
-
-            .details {
-                order: 1;
-                width: 100%;
-                padding-left: 0px;
-            }
-
-            .pricing {
-                order: 2;
-                width: 100%;
-            }
-
-            .register-btn1 {
-                height: 60px;
-            }
-
-            .webinar-details span {
-                font-size: 16px;
-            }
-            .webinar-details{
-                height: 35px;
-            }
-
-            .about-img {
-                width: 100%;
-                order: 1;
-                margin-bottom: 0px;
-            }
-
-            .about-img video {
-                margin-left: 0px;
-            }
-
-            .learn-part{
-                padding: 0px 20px 0px 20px;
-            }
-
-            .learn-part-head {
-                font-size: 28px;
-                font-weight: 700;
-                margin-top: 50px;
-                margin-bottom: 25px;
-                text-align: center;
-            }
-
-            .learn {
-                display: block;
-            }
-
-            .learn-item {
-                flex: 1 1 100%;
-                margin-bottom: 10px;
-            }
-
-            .learn-heading {
-                font-size: 20px;
-            }
-
-            .learn-content {
-                font-size: 15px;
-            }
-
-            .mentor-details {
-                width: 100%;
-                padding-right: 0px;
-            }
-
-            .mentor-img {
-                display: none;
-            }
-
-            .mentor-head {
-                font-size: 28px;
-            }
-
-            .mentor {
-                display: block;
-                margin-top: 50px;
-                padding: 0px 20px 0px 20px;
-            }
-
-            .mentor-name {
-                font-size: 19px;
-            }
-
-            .mentor-content {
-                font-size: 15px;
-            }
-
-            .why-webinar{
-                padding: 0px 20px 0px 20px;
-            }
-
-            .why-heading {
-                font-size: 28px;
-                margin-top: 10px;
-                margin-bottom: 25px;
-            }
-
-            .why-container {
-                display: block;
-            }
-
-            .why-card {
-                flex: 1 1 100%;
-                margin-bottom: 10px;
-            }
-
-            .why-card-heading {
-                font-size: 20px;
-            }
-
-            .why-card-content {
-                font-size: 15px;
-            }
-           
-            
-        }
-    </style>
+    <link rel="stylesheet" href="animation.css">
 </head>
 
 <body>
@@ -764,31 +142,23 @@
 
     <section>
         <div class="mentor">
-            <div class="mentor-details hidden">
-                <div class="mentor-head">Meet Your <span style="color: #0d5ee8;">Mentor</span></div>
-                <div class="mentor-name">Hi, I'm Tamilalagan, an ecommerce entrepreneur, content creator & a mentor to
-                    2,000+ students</div>
-                <div class="mentor-content">
-                    <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've spent over
-                        ₹15
-                        CR on ecommerce marketing.</p>
-                    <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've launched
-                        and
-                        scaled businesses in USA, UK, India, Canada, Australia, Germany, and Netherlands.</p>
-                    <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> I've learned
-                        from
-                        high level international mentors who have generated over ₹15,000 Crores in revenue.</p>
-                    <p><i class="fa-solid fa-circle-dot" style="color: #033b9a; margin-right:10px"></i> And now I
-                        believe
-                        the ambitious Indians need to learn how to take charge of their own financial life.</p>
+            <div class="mentor-head">Meet Your <span>Mentor</span></div>
+            <div class="mentor-card">
+                <div class="mentor-description">
+                    <ul class="custom-bullets">
+                        <li>I have extensive experience in running impactful Meta and Google Ads campaigns, delivering exceptional results for businesses across various industries.</li>
+                        <li>Known for data-driven strategies and meticulous planning, I have helped businesses grow their online presence and achieve measurable outcomes.</li>
+                        <li>Dedicated to simplifying Meta Ads, I have created this workshop to make complex advertising strategies easy to understand and implement.</li>
+                        <li>This workshop is designed to provide real-world insights and proven techniques, empowering participants to create successful campaigns confidently.</li>
 
+                    </ul>
+                </div>
+                <div class="mentor-details">
+                    <img src="assests/header_img/mentor_img.jpg" alt="Mentor" class="mentor-image">
+                <div class="mentor-name">Tamilalagan</div>
+                <div class="mentor-title">Meta Ads Expert</div>
                 </div>
             </div>
-            <div class="mentor-img hidden">
-                <img src="assests\header_img\mentor_img.jpg">
-            </div>
-            
-        </div>
     </section>
 
     <section class="hidden">
@@ -938,28 +308,28 @@
         const carouselSlide = document.querySelector(".carousel-slide");
         const images = document.querySelectorAll(".carousel-slide img");
         let counter = 0;
-    
+
         function updateSize() {
             return images[0].clientWidth;
         }
-    
+
         function autoSlide() {
             const size = updateSize(); // Get the current size of the images
             counter = (counter + 1) % images.length; // Loop back to the first image
             carouselSlide.style.transform = `translateX(${-counter * size}px)`;
         }
-    
+
         // Resize listener for responsive behavior
         window.addEventListener("resize", () => {
             const size = updateSize();
             carouselSlide.style.transform = `translateX(${-counter * size}px)`;
         });
-    
+
         // Auto-slide every 3 seconds
         setInterval(autoSlide, 3000);
     });
 
-       
+
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -978,7 +348,7 @@
         function adjustLayout() {
             const aboutImg = document.querySelector(".about-img");
             const heroBtns = document.querySelector(".hero-btns");
-    
+
             if (window.innerWidth <= 768) {
                 if (aboutImg && heroBtns) {
                     // Move the about-img div before hero-btns
@@ -992,12 +362,12 @@
                 }
             }
         }
-    
+
         // Adjust layout on page load and window resize
         adjustLayout();
         window.addEventListener("resize", adjustLayout);
     });
-    
+
 
 </script>
 
