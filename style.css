@@ -451,7 +451,7 @@ section {
 
     .hero-container {
         padding: 25px;
-        padding-bottom: 10px;
+        padding-bottom: 6px;
         background: linear-gradient(119deg, rgb(38 27 255) 0%, rgb(59 59 255) 55%, rgb(0 222 255) 100%);
         border-radius: 0px;
     }
@@ -470,8 +470,8 @@ section {
     .hero-content {
         font-size: 16px;
         color: white;
-        margin-top: 15px;
-        margin-bottom: 30px;
+        margin-top: 10px;
+        margin-bottom: 20px;
         text-align: center;
     }
 
@@ -525,7 +525,7 @@ section {
         width: 100%;
         margin-bottom: 20px;
         order: 2;
-        margin-top: 10px;
+        margin-top: 5px;
         text-align: center;
     }
 
