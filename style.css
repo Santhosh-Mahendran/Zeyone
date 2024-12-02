@@ -471,7 +471,7 @@ section {
         font-size: 18px;
         color: white;
         margin-top: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         text-align: center;
     }
 
@@ -657,7 +657,13 @@ section {
     }
 
     .why-card-heading {
+        display: flex;
         font-size: 20px;
+        align-items: center;
+        gap: 4px;
+    }
+    .why-card-heading i{
+        font-size: 15px;
     }
 
     .why-card-content {
