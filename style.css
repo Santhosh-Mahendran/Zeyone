@@ -450,7 +450,7 @@ section {
     }
 
     .hero-container {
-        padding: 25px;
+        padding: 20px;
         padding-bottom: 6px;
         background: linear-gradient(119deg, rgb(38 27 255) 0%, rgb(59 59 255) 55%, rgb(0 222 255) 100%);
         border-radius: 0px;
@@ -468,10 +468,10 @@ section {
     }
 
     .hero-content {
-        font-size: 16px;
+        font-size: 18px;
         color: white;
         margin-top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         text-align: center;
     }
 
