@@ -1,0 +1,89 @@
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.terms {
+    margin: 20px 0;
+}
+
+.terms h2 {
+    font-size: 1.2em;
+    color: #444;
+    margin: 15px 0 10px;
+}
+
+.terms p {
+    text-indent: 1.5em;
+    margin-bottom: 10px;
+}
+
+.terms ul {
+    list-style: decimal inside;
+    margin: 10px 0 10px 1em;
+    padding-left: 10px;
+}
+
+.terms ul li {
+    margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9em;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    
+    .terms p {
+        text-indent: 0em;
+        margin-bottom: 10px;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    .terms ul {
+        list-style: decimal inside;
+        padding-left: 0px;
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .terms h2 {
+        font-size: 1.1em;
+        color: #444;
+        margin: 11px 0 8px;
+    }
+}
