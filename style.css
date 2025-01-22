@@ -489,10 +489,7 @@ section {
         padding: 5px 0px 5px 0px;
     }
 
-    .header button {
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
+    .header a {
         display: none;
     }
 
