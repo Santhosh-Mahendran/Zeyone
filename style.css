@@ -38,7 +38,7 @@ section {
     margin-left: 10px;
 }
 
-.header button {
+.header a {
 
     display: inline-block;
     outline: 0;
@@ -51,6 +51,7 @@ section {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
     font-size: 18px;
     height: 42px;
+    text-decoration: none;
 
 
 }
@@ -120,6 +121,7 @@ section {
     height: 42px;
     margin-top: 15px;
     margin-left: 5px;
+    text-decoration: none;
 }
 
 .register-btn:hover {
@@ -255,6 +257,8 @@ section {
     margin-top: 7px;
     margin-left: 5px;
     width: 100%;
+    text-decoration: none;
+    text-align: center;
 }
 
 .register-btn1:hover {
@@ -780,6 +784,17 @@ section {
         padding-right: 0px;
     }
 
+    .footer-content {
+        flex-direction: row;
+        align-items:normal;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
 }
 
 
@@ -788,7 +803,7 @@ section {
 .footer {
     display: flex;
     margin-top: 30px;
-    height: 70px;
+    padding: 10px 0px;
     background: linear-gradient(119deg, rgb(38 27 255) 0%, rgb(59 59 255) 55%, rgb(0, 179, 255) 100%);    border-radius: 30px 30px 0px 0px;
     color: white;
 }
