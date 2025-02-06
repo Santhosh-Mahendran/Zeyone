@@ -31,8 +31,16 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Please enter message..." required></textarea>
       </div>
-      <button type="submit">Submit</button>
+      <button id="msg-btn">Submit</button>
     </form>
   </div>
+
+  <script>
+    document.getElementById("msg-btn").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevents default form submission if inside a form
+      alert("Message sent");
+      window.location.href = "index.html"; // Redirect to index.html
+    });
+  </script>
 </body>
 </html>
